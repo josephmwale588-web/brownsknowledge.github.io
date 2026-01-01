@@ -1,83 +1,103 @@
-// ===== MOBILE MENU TOGGLE =====
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const mainNav = document.querySelector('.main-nav');
+/* =========================================================
+   PREMIUM UX ENHANCEMENTS (APPEND ONLY)
+   ========================================================= */
 
-mobileMenuBtn.addEventListener('click', () => {
-  mainNav.classList.toggle('active');
+/* CURRENT YEAR AUTO UPDATE */
+document.querySelectorAll('[data-current-year]').forEach(el => {
+  el.textContent = new Date().getFullYear();
 });
 
-// Close menu when clicking a link (mobile)
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    if(mainNav.classList.contains('active')) {
-      mainNav.classList.remove('active');
+/* ACTIVE NAV LINK HIGHLIGHT */
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  let scrollY = window.pageYOffset;
+
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 120;
+    const sectionId = current.getAttribute('id');
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${sectionId}`) {
+          link.classList.add('active');
+        }
+      });
     }
   });
 });
 
-// ===== BACK TO TOP BUTTON =====
-const backToTopBtn = document.querySelector('.back-to-top');
+/* BUTTON RIPPLE EFFECT (SUBTLE) */
+document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
+  btn.addEventListener('click', function (e) {
+    const ripple = document.createElement('span');
+    ripple.classList.add('ripple');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    backToTopBtn.classList.add('visible');
-  } else {
-    backToTopBtn.classList.remove('visible');
+    this.appendChild(ripple);
+
+    const rect = this.getBoundingClientRect();
+    ripple.style.left = `${e.clientX - rect.left}px`;
+    ripple.style.top = `${e.clientY - rect.top}px`;
+
+    setTimeout(() => ripple.remove(), 600);
+  });
+});
+
+/* FADE PAGE ON LOAD */
+window.addEventListener('load', () => {
+  document.body.style.opacity = '0';
+  document.body.style.transition = 'opacity 0.6s ease';
+  setTimeout(() => {
+    document.body.style.opacity = '1';
+  }, 100);
+});
+
+/* FORM SUCCESS MESSAGE (PROFESSIONAL) */
+const forms = document.querySelectorAll('form');
+forms.forEach(form => {
+  form.addEventListener('submit', () => {
+    const successMsg = document.createElement('div');
+    successMsg.textContent = 'Thank you! We will contact you shortly.';
+    successMsg.style.marginTop = '1rem';
+    successMsg.style.padding = '0.8rem';
+    successMsg.style.background = 'rgba(25, 135, 84, 0.15)';
+    successMsg.style.borderLeft = '4px solid #198754';
+    successMsg.style.borderRadius = '6px';
+    successMsg.style.fontSize = '0.95rem';
+
+    form.appendChild(successMsg);
+
+    setTimeout(() => successMsg.remove(), 5000);
+  });
+});
+
+/* PAYMENT COPY TO CLIPBOARD */
+document.querySelectorAll('[data-copy]').forEach(el => {
+  el.addEventListener('click', () => {
+    navigator.clipboard.writeText(el.dataset.copy);
+    alert('Payment detail copied successfully.');
+  });
+});
+
+/* DELAYED ADSENSE LOAD (PERFORMANCE FRIENDLY) */
+setTimeout(() => {
+  document.querySelectorAll('.ad-slot').forEach(ad => {
+    ad.classList.add('ad-loaded');
+  });
+}, 1200);
+
+/* SIMPLE PAGE TRANSITION FOR INTERNAL LINKS */
+document.querySelectorAll('a').forEach(link => {
+  if (link.hostname === window.location.hostname) {
+    link.addEventListener('click', e => {
+      if (link.getAttribute('href').startsWith('#')) return;
+      e.preventDefault();
+      document.body.style.opacity = '0';
+      setTimeout(() => {
+        window.location.href = link.href;
+      }, 300);
+    });
   }
 });
 
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if(target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
-
-// ===== SIMPLE CONTACT FORM VALIDATION =====
-const contactForm = document.querySelector('.contact-form');
-if(contactForm) {
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = this.querySelector('input[name="name"]');
-    const email = this.querySelector('input[name="email"]');
-    const message = this.querySelector('textarea[name="message"]');
-    let valid = true;
-
-    [name, email, message].forEach(field => {
-      field.style.borderColor = '#ddd';
-      if(!field.value.trim()) {
-        field.style.borderColor = 'red';
-        valid = false;
-      }
-    });
-
-    if(valid) {
-      alert('Form submitted successfully!');
-      this.reset();
-    } else {
-      alert('Please fill in all fields.');
-    }
-  });
-}
-
-// ===== ADD FADE-IN ANIMATION TO SECTIONS =====
-const fadeInElements = document.querySelectorAll('.animate-in');
-fadeInElements.forEach(el => {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
-  observer.observe(el);
-});
