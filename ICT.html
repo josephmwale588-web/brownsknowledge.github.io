@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- META -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ICT Services & Digital Skills Training in Malawi | Browns Knowledge Hub</title>
+  <meta name="description" content="Browns Knowledge Hub offers ICT training, digital skills, system support, websites, and technology solutions for students, institutions, and businesses in Malawi.">
+  <meta name="keywords" content="ICT Training Malawi, Digital Skills Malawi, Website Development Malawi, IT Support Malawi, Computer Training Malawi">
+  <meta name="author" content="Joseph Mwale">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="ICT & Digital Skills – Browns Knowledge Hub">
+  <meta property="og:description" content="ICT training, digital solutions, and system support in Malawi.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://brownsknowledge.netlify.app/ict.html">
+  <meta property="og:image" content="https://brownsknowledge.netlify.app/images/og-image-ict.png">
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ICT & Digital Skills – Browns Knowledge Hub">
+  <meta name="twitter:description" content="ICT training, digital solutions, and system support in Malawi.">
+  <meta name="twitter:image" content="https://brownsknowledge.netlify.app/images/og-image-ict.png">
+
+  <!-- STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Browns Knowledge Hub",
+    "url": "https://brownsknowledge.netlify.app/ict.html",
+    "logo": "https://brownsknowledge.netlify.app/images/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61556986438861",
+      "https://wa.me/265993812391"
+    ],
+    "telephone": "+265994584114",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lilongwe",
+      "addressCountry": "MW"
+    }
+  }
+  </script>
+
+  <!-- ANALYTICS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- ICONS & CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- FIREBASE (READY, NOT REMOVED) -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+
+  <!-- MAIN JS -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-flex">
+    <h1 class="logo">Browns<span>Knowledge</span></h1>
+
+    <button class="mobile-menu-btn" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="main-nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ict.html" class="active">ICT</a></li>
+        <li><a href="accounting.html">Accounting</a></li>
+        <li><a href="msce.html">MSCE</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="scholarships.html">Scholarships</a></li>
+        <li><a href="inquiry.html" class="btn-primary">Inquiry</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h2>ICT Services & Digital Skills Training</h2>
+    <p>Practical ICT training, digital solutions, and technical support across Malawi.</p>
+    <a href="#services" class="btn-primary">View Services</a>
+  </div>
+</section>
+
+<!-- AD TOP -->
+<div class="ad-slot ad-banner">Advertisement</div>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+    <h3>Our ICT Services</h3>
+
+    <div class="grid">
+      <div class="card">
+        <h4>ICT Training & Digital Skills</h4>
+        <p>Computer basics, digital literacy, office productivity tools.</p>
+        <a href="inquiry.html" class="btn-secondary">Request Training</a>
+      </div>
+
+      <div class="card">
+        <h4>Website Design & Development</h4>
+        <p>Professional websites optimized for SEO and mobile.</p>
+        <a href="inquiry.html" class="btn-secondary">Request Website</a>
+      </div>
+
+      <div class="card">
+        <h4>Systems Support & IT Assistance</h4>
+        <p>Maintenance, installation, and troubleshooting.</p>
+        <a href="inquiry.html" class="btn-secondary">Request Support</a>
+      </div>
+
+      <div class="card">
+        <h4>Digital Documentation & Tools</h4>
+        <p>Online forms, workflows, and data tools.</p>
+        <a href="inquiry.html" class="btn-secondary">Request Tools</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AD MID -->
+<div class="ad-slot ad-content">Advertisement</div>
+
+<!-- WHO WE SERVE -->
+<section class="section bg-light">
+  <div class="container">
+    <h3>Who We Serve</h3>
+    <ul>
+      <li>Students and job seekers</li>
+      <li>Schools and training institutions</li>
+      <li>NGOs and development partners</li>
+      <li>SMEs and community groups</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section bg-light" id="pricing">
+  <div class="container">
+    <h3>ICT Service Packages</h3>
+
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h4>Basic Support</h4>
+        <p class="price">MWK 150,000</p>
+        <a href="inquiry.html?service=ICT Basic Support" class="btn-secondary">Request</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <h4>Professional</h4>
+        <p class="price">MWK 350,000</p>
+        <a href="inquiry.html?service=ICT Professional Package" class="btn-primary">Most Popular</a>
+      </div>
+
+      <div class="pricing-card">
+        <h4>Enterprise</h4>
+        <p class="price">Custom Quote</p>
+        <a href="inquiry.html?service=ICT Enterprise Package" class="btn-secondary">Talk to Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <h3>Request ICT Support or Training</h3>
+    <a href="inquiry.html" class="btn-primary">Make an Inquiry</a>
+  </div>
+</section>
+
+<!-- AD FOOTER -->
+<div class="ad-slot ad-footer">Advertisement</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    <p>© <span data-current-year></span> BrownsKnowledge.com</p>
+    <p>Designed by JoeBrowns Mw 🇲🇼</p>
+  </div>
+</footer>
+
+<!-- UTILITIES -->
+<button id="backToTop" class="back-to-top"><i class="fas fa-chevron-up"></i></button>
+
+<!-- PAYPAL -->
+<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+<script>
+  paypal.Buttons({
+    createOrder: (data, actions) => actions.order.create({
+      purchase_units: [{ amount: { value: '5.00' } }]
+    }),
+    onApprove: (data, actions) => actions.order.capture()
+      .then(() => alert("Payment successful. Contact WhatsApp for unlock."))
+  }).render('#paypal-button-container');
+</script>
+
+<script src="js/premium.js"></script>
+
+</body>
+</html>

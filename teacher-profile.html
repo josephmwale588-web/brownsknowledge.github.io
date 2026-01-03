@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Profile | Browns Knowledge Hub</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Teacher profile page on Browns Knowledge Hub – view and edit profile, manage uploaded resources, and account settings.">
+  <meta name="author" content="Joseph Mwale">
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JS -->
+  <script src="teacher-profile.js" defer></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-flex">
+    <h1 class="logo">Browns<span>Knowledge</span></h1>
+    <nav class="main-nav">
+      <ul class="nav-links">
+        <li><a href="teacher-dashboard.html">Dashboard</a></li>
+        <li><a href="teacher-profile.html" class="active">Profile</a></li>
+        <li><a href="premium.html">Premium Content</a></li>
+        <li><a href="#" id="logoutBtn" class="btn-primary">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h2>Teacher Profile</h2>
+    <p>Manage your personal info, update password, and view uploaded premium resources.</p>
+  </div>
+</section>
+
+<!-- ADSENSE TOP -->
+<div class="ad-slot ad-banner">Advertisement</div>
+
+<!-- PROFILE INFO -->
+<section class="section">
+  <div class="container">
+    <h3>Profile Information</h3>
+
+    <div class="card profile-card">
+      <form id="profileForm">
+        <div class="form-group">
+          <label for="teacherName">Full Name</label>
+          <input type="text" id="teacherName" name="teacherName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="teacherEmail">Email</label>
+          <input type="email" id="teacherEmail" name="teacherEmail" readonly>
+        </div>
+
+        <div class="form-group">
+          <label for="teacherPhone">Phone Number</label>
+          <input type="tel" id="teacherPhone" name="teacherPhone">
+        </div>
+
+        <div class="form-group">
+          <label for="profilePic">Profile Picture</label>
+          <input type="file" id="profilePic" name="profilePic" accept="image/*">
+        </div>
+
+        <button type="submit" class="btn-primary">Update Profile</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- UPLOADED RESOURCES -->
+<section class="section bg-light">
+  <div class="container">
+    <h3>Your Uploaded Premium Resources</h3>
+    <table class="dashboard-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Price (MWK)</th>
+          <th>Uploaded On</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="uploadedResourcesBody">
+        <!-- JS will populate -->
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© <span data-current-year></span> BrownsKnowledge.com | All Rights Reserved</p>
+      <p>Designed by JoeBrowns Mw 🇲🇼</p>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button id="backToTop" class="back-to-top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- JS -->
+<script src="teacher-profile.js" defer></script>
+
+</body>
+</html>

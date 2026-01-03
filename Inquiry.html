@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- META -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact & Inquiry – Browns Knowledge Hub Malawi</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Contact Browns Knowledge Hub for inquiries, quotations, ICT & accounting support, downloads, scholarships, and academic guidance across Malawi.">
+  <meta name="keywords" content="Contact Browns Knowledge Hub, Inquiry Malawi, ICT Support Malawi, Accounting Services Malawi, Academic Assistance Malawi">
+  <meta name="author" content="Joseph Mwale">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Contact & Inquiry – Browns Knowledge Hub">
+  <meta property="og:description" content="Send inquiries, request quotations, or chat with Browns Knowledge Hub in Malawi.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://brownsknowledge.netlify.app/inquiry.html">
+  <meta property="og:image" content="https://brownsknowledge.netlify.app/assets/og-inquiry.png">
+
+  <!-- FAVICON -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- FIREBASE (READY FOR FORM BACKEND) -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+
+  <!-- MAIN JS -->
+  <script src="script.js" defer></script>
+
+  <!-- GOOGLE ANALYTICS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <div class="container header-flex">
+    <h1 class="logo">Browns<span>Knowledge</span></h1>
+
+    <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="main-nav" role="navigation" aria-label="Main menu">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ict.html">ICT</a></li>
+        <li><a href="accounting.html">Accounting</a></li>
+        <li><a href="msce.html">MSCE</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="scholarships.html">Scholarships</a></li>
+        <li><a href="inquiry.html" class="active btn-primary">Inquiry</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inquiry-hero">
+  <div class="container">
+    <h2>Contact & Inquiry</h2>
+    <p>
+      Reach out to Browns Knowledge Hub for inquiries, quotations,
+      academic support, ICT & accounting services, or general guidance across Malawi.
+    </p>
+  </div>
+</section>
+
+<!-- AD TOP -->
+<div class="ad-slot ad-banner" role="complementary" aria-label="Advertisement">Advertisement</div>
+
+<!-- CONTACT FORM -->
+<section class="section" id="contact-form-section">
+  <div class="container">
+    <h3>Send Us a Message</h3>
+
+    <form class="contact-form" id="inquiryForm" aria-label="Contact form for inquiries">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="emailAddress">Email Address</label>
+        <input type="email" id="emailAddress" name="emailAddress" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+265..." required>
+      </div>
+
+      <div class="form-group">
+        <label for="messageContent">Message</label>
+        <textarea id="messageContent" name="messageContent" rows="5" placeholder="Type your inquiry here..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary" aria-label="Send inquiry message">
+        Send Inquiry
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- AD MID -->
+<div class="ad-slot ad-content" role="complementary" aria-label="Advertisement">Advertisement</div>
+
+<!-- DIRECT CONTACT -->
+<section class="section bg-light">
+  <div class="container">
+    <h3>Direct Contact</h3>
+
+    <p><strong>Email:</strong>
+      <a href="mailto:josephmwale588@gmail.com">josephmwale588@gmail.com</a>
+    </p>
+
+    <p><strong>WhatsApp:</strong>
+      <a href="https://wa.me/265993812391" target="_blank" rel="noopener">
+        +265 993 812 391
+      </a>
+    </p>
+
+    <p><strong>Facebook:</strong>
+      <a href="https://www.facebook.com/profile.php?id=61556986438861" target="_blank" rel="noopener">
+        Browns Knowledge Hub
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- PAYMENTS -->
+<section class="section">
+  <div class="container">
+    <h3>Payment Options</h3>
+
+    <ul class="payment-list">
+      <li>
+        <strong>Bank Deposit:</strong>
+        <span data-copy="1180000217834" role="button" tabindex="0">1180000217834</span>
+      </li>
+      <li>
+        <strong>Airtel Money:</strong>
+        <span data-copy="+265993812391" role="button" tabindex="0">+265 993 812 391</span>
+      </li>
+      <li>
+        <strong>TNM Mpamba:</strong>
+        <span data-copy="+265888601272" role="button" tabindex="0">+265 888 601 272</span>
+      </li>
+    </ul>
+
+    <p>We operate based on <strong>client convenience</strong> and agreed terms.</p>
+  </div>
+</section>
+
+<!-- AD FOOTER -->
+<div class="ad-slot ad-footer" role="complementary" aria-label="Advertisement">Advertisement</div>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-bottom">
+    <p>© <span data-current-year></span> BrownsKnowledge.com | All Rights Reserved</p>
+    <p>Designed by JoeBrowns Mw 🇲🇼</p>
+  </div>
+</footer>
+
+<!-- UTILITIES -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="js/premium.js"></script>
+
+</body>
+</html>

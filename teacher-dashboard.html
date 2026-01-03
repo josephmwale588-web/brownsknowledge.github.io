@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Teacher dashboard</title>
+</head>
+<body>
+  <script type="module">
+import { auth, db } from './js/auth.js';
+import { doc, getDoc } from "firebase/firestore";
+
+auth.onAuthStateChanged(async user => {
+  if (!user) {
+    window.location.href = "login.html";
+    return;
+  }
+
+  const snap = await getDoc(doc(db, "users", user.uid));
+
+  if (!snap.exists() || snap.data().role !== "teacher") {
+    alert("Access denied.");
+    window.location.href = "/";
+    return;
+  }
+
+  if (!snap.data().approved) {
+    alert("Await admin approval.");
+    window.location.href = "/";
+  }
+});
+</script>
+  <section class="section">
+  <div class="container">
+    <h3>Teacher Dashboard</h3>
+
+    <input type="text" id="title" placeholder="Content Title">
+    <input type="text" id="subject" placeholder="Subject">
+    <select id="access">
+      <option value="free">Free</option>
+      <option value="premium">Premium</option>
+    </select>
+    <input type="number" id="price" placeholder="Price (if premium)">
+    <input type="file" id="pdf">
+
+    <button class="btn-primary" id="upload">
+      Upload Material
+    </button>
+  </div>
+</section>
+
+<script src="js/teacher-upload.js" type="module"></script>
+  <section class="section bg-light">
+  <div class="container">
+    <h3>Your Earnings</h3>
+
+    <p>
+      💰 Total Earnings:
+      <strong id="earnings">MWK 0</strong>
+    </p>
+
+    <p>
+      💳 Payouts are processed manually (for now).
+    </p>
+  </div>
+</section>
+</body>
+</html>

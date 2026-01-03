@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Dashboard | Browns Knowledge Hub</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Teacher Dashboard for managing premium content, revision packs, and student resources on Browns Knowledge Hub.">
+  <meta name="author" content="Joseph Mwale">
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JS -->
+  <script src="teacher-dashboard.js" defer></script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-flex">
+    <h1 class="logo">Browns<span>Knowledge</span></h1>
+    <nav class="main-nav">
+      <ul class="nav-links">
+        <li><a href="teacher-dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="premium.html">Premium Content</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="#" id="logoutBtn" class="btn-primary">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h2>Teacher Dashboard</h2>
+    <p>Manage premium content, view student requests, and upload verified resources.</p>
+  </div>
+</section>
+
+<!-- ADSENSE TOP -->
+<div class="ad-slot ad-banner">Advertisement</div>
+
+<!-- DASHBOARD SECTIONS -->
+<section class="section">
+  <div class="container">
+    <h3>Premium Content Management</h3>
+
+    <!-- Add New Resource -->
+    <div class="card">
+      <h4>Add New Premium Resource</h4>
+      <form id="addResourceForm">
+        <div class="form-group">
+          <label for="resourceTitle">Title</label>
+          <input type="text" id="resourceTitle" name="resourceTitle" required>
+        </div>
+
+        <div class="form-group">
+          <label for="resourceDescription">Description</label>
+          <textarea id="resourceDescription" name="resourceDescription" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="resourcePrice">Price (MWK)</label>
+          <input type="number" id="resourcePrice" name="resourcePrice" required>
+        </div>
+
+        <div class="form-group">
+          <label for="resourceFile">Upload File</label>
+          <input type="file" id="resourceFile" name="resourceFile" required>
+        </div>
+
+        <button type="submit" class="btn-primary">Add Resource</button>
+      </form>
+    </div>
+
+    <!-- Existing Resources -->
+    <div class="card">
+      <h4>Existing Premium Resources</h4>
+      <table class="dashboard-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Price (MWK)</th>
+            <th>Uploaded On</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="resourcesTableBody">
+          <!-- JS will populate this -->
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© <span data-current-year></span> BrownsKnowledge.com | All Rights Reserved</p>
+      <p>Designed by JoeBrowns Mw 🇲🇼</p>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button id="backToTop" class="back-to-top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- Firebase + JS -->
+<script src="js/teacher-dashboard.js" defer></script>
+</body>
+</html>

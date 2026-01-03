@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Sign Up | Browns Knowledge Hub</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Register as a teacher at Browns Knowledge Hub. Teacher accounts are verified manually before access to premium resources.">
+  <meta name="keywords" content="Teacher Signup, Teacher Registration, Browns Knowledge Hub, Malawi Teachers">
+  <meta name="author" content="Joseph Mwale">
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-flex">
+    <h1 class="logo">Browns<span>Knowledge</span></h1>
+    <nav class="main-nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="premium.html">Premium</a></li>
+        <li><a href="inquiry.html">Inquiry</a></li>
+        <li><a href="teacher-signup.html" class="active btn-primary">Teacher Sign Up</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h2>Teacher Registration</h2>
+    <p>Apply as a teacher to upload and manage premium resources. Accounts are approved manually for security and verification purposes.</p>
+  </div>
+</section>
+
+<!-- SIGN UP FORM -->
+<section class="section">
+  <div class="container">
+    <h3>Register as a Teacher</h3>
+
+    <form id="teacherSignup" aria-label="Teacher registration form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter a password" required>
+      </div>
+
+      <button type="submit" class="btn-primary">
+        Apply as Teacher
+      </button>
+    </form>
+
+    <p>⚠️ Teacher accounts are approved manually by the admin.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span data-current-year></span> BrownsKnowledge.com | All Rights Reserved</p>
+    <p>Designed by JoeBrowns Mw 🇲🇼</p>
+  </div>
+</footer>
+
+<script type="module" src="js/teacher-auth.js"></script>
+
+</body>
+</html>

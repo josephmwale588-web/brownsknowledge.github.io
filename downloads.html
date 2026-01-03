@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Downloads Centre | MSCE, JCE & Learning Resources – Browns Knowledge Hub</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Download MSCE & JCE results, revision materials, and public learning resources from Browns Knowledge Hub – Malawi’s trusted education platform.">
+  <meta name="keywords" content="MSCE Results Malawi, JCE Results Malawi, Revision Materials, Education Resources Malawi, Academic Downloads">
+  <meta name="author" content="Joseph Mwale">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Downloads Centre – Browns Knowledge Hub">
+  <meta property="og:description" content="Access MSCE, JCE, revision materials, and public learning resources in Malawi.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://brownsknowledge.netlify.app/downloads.html">
+  <meta property="og:image" content="https://brownsknowledge.netlify.app/assets/og-downloads.png">
+
+  <!-- Icons -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Core JS -->
+  <script src="script.js" defer></script>
+
+  <!-- Firebase SDKs -->
+  <script defer src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+
+  <!-- Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <div class="container header-flex">
+    <h1 class="logo">Browns<span>Knowledge</span></h1>
+
+    <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="main-nav" role="navigation" aria-label="Main menu">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ict.html">ICT</a></li>
+        <li><a href="accounting.html">Accounting</a></li>
+        <li><a href="msce.html">MSCE</a></li>
+        <li><a href="downloads.html" class="active">Downloads</a></li>
+        <li><a href="scholarships.html">Scholarships</a></li>
+        <li><a href="inquiry.html" class="btn-primary">Inquiry</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="downloads-hero">
+  <div class="container">
+    <h2>Downloads Centre</h2>
+    <p>
+      Access academic and public learning resources for Malawi, including
+      MSCE & JCE results, revision materials, and official public documents.
+    </p>
+  </div>
+</section>
+
+<!-- ADS TOP -->
+<div class="ad-slot ad-banner" role="complementary">Advertisement</div>
+
+<!-- AVAILABLE RESOURCES -->
+<section class="section" id="available-resources">
+  <div class="container">
+    <h3>Available Resources</h3>
+
+    <div class="grid">
+
+      <div class="card">
+        <h4>MSCE Examination Results</h4>
+        <p>Official Malawi School Certificate of Education (MSCE) results released by MANEB.</p>
+        <a href="msce.html" class="btn-primary">Go to MSCE Page →</a>
+      </div>
+
+      <div class="card">
+        <h4>JCE Examination Results</h4>
+        <p>Junior Certificate of Education (JCE) results and academic guidance.</p>
+        <a href="#" class="btn-primary">View JCE Resources →</a>
+      </div>
+
+      <div class="card">
+        <h4>Revision Materials</h4>
+        <p>Selected revision notes, past papers, and learning guides.</p>
+        <a href="#" class="btn-primary">Browse Revision Materials →</a>
+      </div>
+
+      <div class="card">
+        <h4>Public Learning Resources</h4>
+        <p>Guides, forms, and educational resources released by institutions.</p>
+        <a href="#" class="btn-primary">View Public Resources →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PREMIUM DOWNLOADS -->
+<section class="section" id="premium-downloads">
+  <div class="container">
+    <h3>Premium Revision Materials</h3>
+
+    <div class="grid">
+
+      <div class="card premium-card">
+        <h4>MSCE Mathematics – Full Revision Pack (PDF)</h4>
+        <p>Complete worked examples, past questions, and examiner tips.</p>
+        <button class="btn-primary locked-btn" data-item="msce-maths" id="premium-msce-maths">
+          🔒 Unlock – MWK 3,000
+        </button>
+      </div>
+
+      <div class="card premium-card">
+        <h4>MSCE English – Essays & Comprehension Guide</h4>
+        <p>High-scoring essay structures and comprehension techniques.</p>
+        <button class="btn-primary locked-btn" data-item="msce-english" id="premium-msce-english">
+          🔒 Unlock – MWK 2,500
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ADS MID -->
+<div class="ad-slot ad-content" role="complementary">Advertisement</div>
+
+<!-- DISCLAIMER -->
+<section class="section bg-light">
+  <div class="container">
+    <h3>Important Notice</h3>
+    <p>
+      All materials shared here are for educational purposes only.
+      Browns Knowledge Hub does not alter official documents.
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <h3>Need Assistance?</h3>
+    <p>If you cannot find a resource or require guidance, please contact us.</p>
+    <a href="inquiry.html" class="btn-primary">Contact Support</a>
+  </div>
+</section>
+
+<!-- FOOTER ADS -->
+<div class="ad-slot ad-footer" role="complementary">Advertisement</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© <span data-current-year></span> BrownsKnowledge.com | All Rights Reserved</p>
+      <p>Designed by JoeBrowns Mw 🇲🇼</p>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- Premium Logic -->
+<script src="js/premium.js" defer></script>
+
+<!-- PayPal -->
+<script defer src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+<script defer>
+  paypal.Buttons({
+    createOrder: (data, actions) => {
+      return actions.order.create({
+        purchase_units: [{ amount: { value: '5.00' } }]
+      });
+    },
+    onApprove: (data, actions) => {
+      return actions.order.capture().then(() => {
+        alert("Payment successful. Contact WhatsApp for unlock.");
+      });
+    }
+  }).render('#paypal-button-container');
+</script>
+
+</body>
+</html>

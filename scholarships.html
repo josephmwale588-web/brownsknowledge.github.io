@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Scholarships & Funding Opportunities in Malawi | Browns Knowledge Hub</title>
+  <meta name="description" content="Find scholarships, grants, fellowships, and education funding opportunities available in Malawi and abroad for Malawian students.">
+  <meta name="keywords" content="Scholarships Malawi, Education Funding Malawi, Grants Malawi, Fellowships Malawi, Study Opportunities Malawi">
+  <meta name="author" content="Joseph Mwale">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Scholarships & Funding Opportunities – Browns Knowledge Hub">
+  <meta property="og:description" content="Scholarships, grants, and fellowships for Malawian students.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://brownsknowledge.netlify.app/scholarships.html">
+  <meta property="og:image" content="https://brownsknowledge.netlify.app/images/og-image-scholarships.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Scholarships & Funding Opportunities – Browns Knowledge Hub">
+  <meta name="twitter:description" content="Scholarships, grants, and fellowships for Malawian students.">
+  <meta name="twitter:image" content="https://brownsknowledge.netlify.app/images/og-image-scholarships.png">
+
+  <!-- Structured Data (Scholarship Listing) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOccupationalProgram",
+    "name": "Scholarships & Funding Opportunities",
+    "description": "Local and international scholarships, grants, and fellowship opportunities for Malawian students.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Browns Knowledge Hub",
+      "url": "https://brownsknowledge.netlify.app/scholarships.html"
+    }
+  }
+  </script>
+  <!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JS -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <div class="container header-flex">
+    <h1 class="logo">Browns<span>Knowledge</span></h1>
+
+    <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="main-nav" role="navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ict.html">ICT</a></li>
+        <li><a href="accounting.html">Accounting</a></li>
+        <li><a href="msce.html">MSCE</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="scholarships.html" class="active">Scholarships</a></li>
+        <li><a href="inquiry.html" class="btn-primary">Inquiry</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero" role="region" aria-label="Scholarships Hero Section">
+  <div class="container">
+    <h2>Scholarships & Funding Opportunities</h2>
+    <p>Discover scholarships, grants, and fellowship opportunities available locally and internationally for Malawian students.</p>
+    <a href="#scholarship-listings" class="btn-primary">Explore Opportunities</a>
+  </div>
+</section>
+
+<!-- ADSENSE SLOT (TOP) -->
+<div class="ad-slot ad-banner" role="complementary" aria-label="Advertisement">Advertisement</div>
+
+<!-- SCHOLARSHIP LISTINGS -->
+<section class="section" id="scholarship-listings" role="region" aria-label="Scholarship Listings">
+  <div class="container">
+    <h3>Available Opportunities</h3>
+
+    <div class="grid">
+      <div class="card">
+        <h4>Local Scholarships (Malawi)</h4>
+        <p>Scholarships and bursaries offered by government institutions, NGOs, faith-based organizations, and private sponsors in Malawi.</p>
+        <a href="inquiry.html" class="btn-secondary">Request Details</a>
+      </div>
+
+      <div class="card">
+        <h4>International Scholarships</h4>
+        <p>Study abroad opportunities, fully funded and partially funded scholarships offered by universities and international partners.</p>
+        <a href="inquiry.html" class="btn-secondary">View Opportunities</a>
+      </div>
+
+      <div class="card">
+        <h4>Grants & Fellowships</h4>
+        <p>Short-term grants, research funding, and professional fellowships for students and early-career professionals.</p>
+        <a href="inquiry.html" class="btn-secondary">Learn More</a>
+      </div>
+
+      <div class="card">
+        <h4>NGO & Institutional Support</h4>
+        <p>Education support programs offered by NGOs, development partners, and academic institutions.</p>
+        <a href="inquiry.html" class="btn-secondary">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADSENSE SLOT (MID PAGE) -->
+<div class="ad-slot ad-content" role="complementary" aria-label="Advertisement">Advertisement</div>
+
+<!-- IMPORTANT NOTE -->
+<section class="section bg-light" role="region" aria-label="Important Scholarship Notice">
+  <div class="container">
+    <h3>Important Information</h3>
+    <p>Browns Knowledge Hub shares scholarship information for public benefit. Applicants are advised to verify deadlines, eligibility criteria, and official application procedures with the original providers.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" id="contact-cta" role="region" aria-label="Contact Call to Action">
+  <div class="container">
+    <h3>Submit or Request a Scholarship Listing</h3>
+    <p>Organizations and sponsors may submit scholarship opportunities for publication. Students may also request assistance in identifying suitable programs.</p>
+    <a href="inquiry.html" class="btn-primary">Make an Inquiry</a>
+  </div>
+</section>
+
+<!-- ADSENSE SLOT (FOOTER) -->
+<div class="ad-slot ad-footer" role="complementary" aria-label="Advertisement">Advertisement</div>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© <span data-current-year></span> BrownsKnowledge.com | All Rights Reserved</p>
+      <p>Designed by JoeBrowns Mw 🇲🇼</p>
+      <p>
+        <a href="https://www.facebook.com/profile.php?id=61556986438861" target="_blank" rel="noopener noreferrer">Facebook</a> | 
+        <a href="https://wa.me/265993812391" target="_blank" rel="noopener noreferrer">WhatsApp</a> | 
+        <a href="mailto:josephmwale588@gmail.com">Email</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button id="backToTop" class="back-to-top" aria-label="Back to Top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+<script src="js/premium.js"></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MSCE Results & Revision Materials | Browns Knowledge Hub – Malawi</title>
+  <meta name="description" content="Access Malawi School Certificate of Education (MSCE) results, revision materials, and official examination information from Browns Knowledge Hub.">
+  <meta name="keywords" content="MSCE Results Malawi, MSCE Revision Materials, MANEB MSCE, Malawi School Certificate of Education, Exam Preparation Malawi">
+  <meta name="author" content="Joseph Mwale">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MSCE Results & Resources – Browns Knowledge Hub">
+  <meta property="og:description" content="MSCE results, revision materials, and exam information for Malawi.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://brownsknowledge.netlify.app/msce.html">
+  <meta property="og:image" content="https://brownsknowledge.netlify.app/images/og-image-msce.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MSCE Results & Resources – Browns Knowledge Hub">
+  <meta name="twitter:description" content="MSCE results, revision materials, and exam information for Malawi.">
+  <meta name="twitter:image" content="https://brownsknowledge.netlify.app/images/og-image-msce.png">
+
+  <!-- Structured Data (Education) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Browns Knowledge Hub",
+    "url": "https://brownsknowledge.netlify.app/msce.html",
+    "logo": "https://brownsknowledge.netlify.app/images/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61556986438861",
+      "https://wa.me/265993812391"
+    ],
+    "description": "Guidance, revision materials, and links to official MSCE results in Malawi.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lilongwe",
+      "addressCountry": "MW"
+    }
+  }
+  </script>
+  <!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JS -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <div class="container header-flex">
+    <h1 class="logo">Browns<span>Knowledge</span></h1>
+
+    <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="main-nav" role="navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ict.html">ICT</a></li>
+        <li><a href="accounting.html">Accounting</a></li>
+        <li><a href="msce.html" class="active">MSCE</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="scholarships.html">Scholarships</a></li>
+        <li><a href="inquiry.html" class="btn-primary">Inquiry</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero" role="region" aria-label="MSCE Hero Section">
+  <div class="container">
+    <h2>MSCE Results & Academic Resources</h2>
+    <p>Access Malawi School Certificate of Education (MSCE) results, revision materials, and official examination information.</p>
+    <a href="#msce-resources" class="btn-primary">View Resources</a>
+  </div>
+</section>
+
+<!-- ADSENSE SLOT (TOP) -->
+<div class="ad-slot ad-banner" role="complementary" aria-label="Advertisement">Advertisement</div>
+
+<!-- MSCE RESOURCES SECTION -->
+<section class="section" id="msce-resources" role="region" aria-label="MSCE Resources">
+  <div class="container">
+    <h3>MSCE Information & Resources</h3>
+
+    <div class="grid">
+      <div class="card">
+        <h4>MSCE Examination Results</h4>
+        <p>Official MSCE results released by the Malawi National Examinations Board (MANEB). Availability depends on official publication schedules.</p>
+        <a href="https://www.maneb.edu.mw" target="_blank" rel="noopener noreferrer" class="btn-secondary">Visit MANEB Website</a>
+      </div>
+
+      <div class="card">
+        <h4>MSCE Revision Materials</h4>
+        <p>Selected revision materials and study guides shared for educational and exam preparation purposes.</p>
+        <a href="downloads.html" class="btn-secondary">View Revision Materials</a>
+      </div>
+
+      <div class="card">
+        <h4>MSCE Examination Guidelines</h4>
+        <p>General examination information, grading guidance, and candidate support information related to MSCE.</p>
+        <a href="inquiry.html" class="btn-secondary">Request Information</a>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="section bg-light" id="subscription-plans">
+  <div class="container">
+    <h3>Premium MSCE Access</h3>
+    <p>Unlock all premium MSCE revision materials for 3 months.</p>
+
+    <div class="grid">
+      <div class="card premium-card">
+        <h4>3-Month Full Access</h4>
+        <p><strong>Includes:</strong></p>
+        <ul>
+          <li>✔ All premium MSCE PDFs</li>
+          <li>✔ Teacher revision packs</li>
+          <li>✔ Exam strategies & updates</li>
+        </ul>
+
+        <p class="price">MWK 7,500 / 3 Months</p>
+
+        <button
+          class="btn-primary subscribe-btn"
+          data-plan="3-month">
+          🔒 Subscribe Now
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="section" id="msce-premium">
+  <div class="container">
+    <h3>Premium MSCE Packages</h3>
+    <div class="grid">
+      <div class="card">
+        <h4>Starter</h4>
+        <p>Selected past papers + basic revision notes</p>
+        <p><strong>MWK 5,000</strong></p>
+        <a href="inquiry.html?service=MSCE Starter" class="btn-primary" data-track="MSCE Starter">
+          Request Package
+        </a>
+      </div>
+
+      <div class="card">
+        <h4>Pro</h4>
+        <p>All past papers + video guides + interactive quizzes</p>
+        <p><strong>MWK 15,000</strong></p>
+        <a href="inquiry.html?service=MSCE Pro" class="btn-primary" data-track="MSCE Pro">
+          Request Package
+        </a>
+      </div>
+
+      <div class="card">
+        <h4>Ultimate</h4>
+        <p>Pro + one-on-one tutoring + personalized feedback</p>
+        <p><strong>MWK 30,000</strong></p>
+        <a href="inquiry.html?service=MSCE Ultimate" class="btn-primary" data-track="MSCE Ultimate">
+          Request Package
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADSENSE SLOT (MID PAGE) -->
+<div class="ad-slot ad-content" role="complementary" aria-label="Advertisement">Advertisement</div>
+
+<!-- IMPORTANT NOTICE -->
+<section class="section bg-light" role="region" aria-label="Important Notice">
+  <div class="container">
+    <h3>Important Notice</h3>
+    <p>Browns Knowledge Hub does not publish or alter official MSCE results. All results are issued by MANEB. This platform provides guidance, links, and educational support only.</p>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="section" id="contact-cta" role="region" aria-label="Contact Call to Action">
+  <div class="container">
+    <h3>Need Help with MSCE Information?</h3>
+    <p>If you need clarification, revision guidance, or assistance locating official MSCE resources, contact us.</p>
+    <a href="inquiry.html" class="btn-primary">Contact Support</a>
+  </div>
+</section>
+  <section class="section" id="course-bundles">
+  <div class="container">
+    <h3>Full Revision Bundles</h3>
+    <div class="grid" id="bundleList"></div>
+  </div>
+</section>
+
+<script type="module" src="js/bundles.js"></script>
+
+<!-- ADSENSE SLOT (FOOTER) -->
+<div class="ad-slot ad-footer" role="complementary" aria-label="Advertisement">Advertisement</div>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© <span data-current-year></span> BrownsKnowledge.com | All Rights Reserved</p>
+      <p>Designed by JoeBrowns Mw 🇲🇼</p>
+      <p>
+        <a href="https://www.facebook.com/profile.php?id=61556986438861" target="_blank" rel="noopener noreferrer">Facebook</a> | 
+        <a href="https://wa.me/265993812391" target="_blank" rel="noopener noreferrer">WhatsApp</a> | 
+        <a href="mailto:josephmwale588@gmail.com">Email</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button id="backToTop" class="back-to-top" aria-label="Back to Top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+<script src="js/premium.js"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+
+<div id="paypal-button-container"></div>
+
+<script>
+paypal.Buttons({
+  createOrder: (data, actions) => {
+    return actions.order.create({
+      purchase_units: [{
+        amount: { value: '5.00' }
+      }]
+    });
+  },
+  onApprove: (data, actions) => {
+    return actions.order.capture().then(() => {
+      alert("Payment successful. Contact WhatsApp for unlock.");
+    });
+  }
+}).render('#paypal-button-container');
+</script>
+</body>
+</html>
